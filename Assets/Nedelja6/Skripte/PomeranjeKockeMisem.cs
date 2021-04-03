@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PomeranjeKockeMisem : MonoBehaviour
@@ -37,9 +35,10 @@ public class PomeranjeKockeMisem : MonoBehaviour
     {
         print("On trigger enter pomeranje kocke");
         brojPoena++;
+
         if (brojPoena == 5)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(0);
         }
     }
 }

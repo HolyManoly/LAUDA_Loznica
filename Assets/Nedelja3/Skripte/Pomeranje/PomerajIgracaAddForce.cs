@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PomerajIgracaAddForce : MonoBehaviour
 {
-    Vector3 deltaVector;
+    Vector3 deltaPomeraj;
 
-    public float forceMultiplier;
+    public float pojacavacSilePomeranja;
 
     public GameObject zidZaUnistiti;
 
@@ -15,12 +13,12 @@ public class PomerajIgracaAddForce : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
-        deltaVector = new Vector3(x, 0f, y);
+        deltaPomeraj = new Vector3(x, 0f, y);
     }
 
     void FixedUpdate()
     {
-        GetComponent<Rigidbody>().AddForce(deltaVector * forceMultiplier);
+        GetComponent<Rigidbody>().AddForce(deltaPomeraj * pojacavacSilePomeranja);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -31,5 +29,5 @@ public class PomerajIgracaAddForce : MonoBehaviour
         {
             Destroy(zidZaUnistiti);
         }
-    }    
+    }
 }

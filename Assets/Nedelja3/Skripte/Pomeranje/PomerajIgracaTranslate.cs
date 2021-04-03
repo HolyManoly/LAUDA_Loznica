@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PomerajIgracaTranslate : MonoBehaviour
 {
-    [SerializeField]
-    private float speed;
+    public float brzina;
 
     // Update is called once per frame
     void Update()
@@ -13,7 +10,7 @@ public class PomerajIgracaTranslate : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
-        Vector3 deltaVector = new Vector3(x, 0f, y);
-        transform.Translate(deltaVector * speed * Time.deltaTime);
+        Vector3 deltaPomeraj = new Vector3(x, 0f, y);
+        transform.Translate(deltaPomeraj * brzina * Time.deltaTime);
     }
 }

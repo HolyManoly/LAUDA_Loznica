@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Nedelja6/Scene/GlavniMeni.unity
+    path: Assets/Nedelja6/Scene/Meni.unity
     guid: 6cfd4ab869c595c4587e35ed98557aac
   - enabled: 1
     path: Assets/Nedelja6/Scene/Nivo1.unity
     guid: 00740b3c1c8f163449778e17abbcf04a
-  - enabled: 1
-    path: Assets/Nedelja6/Scene/Nivo2.unity
-    guid: d4d16c8ba85c8b748848c23c8798033d
   m_configObjects: {}

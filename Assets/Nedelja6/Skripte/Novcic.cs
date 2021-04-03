@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Novcic : MonoBehaviour
 {
@@ -14,11 +12,11 @@ public class Novcic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         audioSource.Play();
-        //Invoke("DestroyMe", audioSource.clip.length);
+        Invoke("DestroyMe", audioSource.clip.length);
     }
 
-    //private void DestroyMe()
-    //{
-    //    Destroy(gameObject);
-    //}
+    private void DestroyMe()
+    {
+       Destroy(gameObject);
+    }
 }
