@@ -8,6 +8,7 @@ Demo scena ima globalni koordinatni sistem sa markerima za svaku osu. Na igrače
 
 #### Nedelja3: Rigidbody komponenta - Kako koristimo fiziku u Unity?
  ![nedelja3_Image](docs/images/rigidbody.png)
+
 Demo scena ima tri kocke koje igrač može da pomera sa WASD, ali svaka koristi drugačiju metodu da bi izvršila to pomeranje:
 * `Transform.Translate()` pomera kocku koristeći njenu Transform komponentu. Ovaj način pomeranja ima veoma visok nivo kontrole ali dovodi do nekonzistentnih sudara, pogotovo prilikom povećanja brzine kretanja.
 * Podešavanje `Rigidbody.velocity` direktno. Ovaj način kretanja rezultuje visokim nivoom kontrole i konzistentnim sudarima, ali takođe i fizički nerealnim ponašanjem.
@@ -20,6 +21,7 @@ Obe prepreke imaju `OnTriggerEnter(Collider other)` i `OnCollisionEnter(dollisio
 
 #### Nedelja4: Prefabi - Šta su i kako ih ubacujemo u scenu?
  ![nedelja4_Image](docs/images/prefabs.png)
+
 Demo scena ima model tenka koji igrač može da kontroliše. A i D tipke za pomeranje, Space tipka za pucanje.
 Na sceni je **KreatorNeprijatelja** sa istoimenom skriptom koja koristi `InvokeRepeating()` metodu da periodično kreira neprijatelja na nasumičnoj poziciji.
 Prefab projektila na sebi ima skriptu **UnistiNaDodir** koja na poziv `OnTriggerEnter()` metode uništava GameObject koji dotakne, pa zatim i sebe.
@@ -27,16 +29,20 @@ Prefab projektila na sebi ima skriptu **UnistiNaDodir** koja na poziv `OnTrigger
 #### Nedelja5: Animacija - Kako animiramo modele?
 Ovaj folder ima dve scene:
  ![nedelja5_Image1](docs/images/motion_basics.png)
+
 SviPokreti scena pokazuje sve animacije koje smo skinuli u paketu humanoidnih animacija sa Asset Store-a.
  ![nedelja5_Image2](docs/images/boys.png)
+
 Demo scena ima dva kontrolera igrača i kocku, svaki sa svojim Animator komponentom.
 Na kocku smo dodali jednu animaciju koja je pomera i menja joj boju.
 Animatori igrača koriste humanoidne animacije, i razlikuju se po kompleksnosti menjanja između tih animacija. Oba igrača imaju animacije stojanja, hodanja i skoka. Veći igrač ima i posebne animacije za kretanje u vazduhu i doskok.
 
 #### Nedelja6: Interfejs i Zvuk - Kako dodati meni u igru i pustiti zvuk u sceni?
  ![nedelja6_Image1](docs/images/ui_menu.png) 
+
 Meni scena ima osnovne elemente interfejsa, slike i dugme za pokretanje scene Nivo1:
  ![nedelja6_Image2](docs/images/level1.png)
+ 
 U ovoj sceni, igrač može da koristi kursor kako bi pritiskom na sfere pomerao crvenu kocku.
 Koristimo metode `Camera.main.ScreenPointToRay()` i `Physics.Raycast()` da bismo definisali **gde** se pomeramo, zatim `Vector3.Lerp()` metodu da definišemo **kako** da se pomerimo. Sfere na sebi imaju implementirane `OnTriggerEnter()` metode u kojima puštaju zvuk. Ovu metodu implementira i skripta **PomeranjeKockeMisem** da bi povećala broj poena, i prilikom sakupljanja dovoljno poena učitava nazad Meni scenu.
 
