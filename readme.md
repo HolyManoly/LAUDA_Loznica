@@ -3,6 +3,7 @@ Sadrži 5 foldera od kojih svaki pokriva jednu lekciju i bitan Unity koncept:
 
 #### Nedelja2: Pomeranje objekata - Kako pomeriti objekat u Unity sceni?
  ![nedelja2_Image](docs/images/local_vs_global.png)
+
 Demo scena ima globalni koordinatni sistem sa markerima za svaku osu. Na igračevoj glavi su takođe markeri koji predstavljaju njegov lokalni koordinatni sistem.
 **Kontroler** skripta koristi WASD kontrole da pomera igrača po terenu. Koriste se takođe tipke L i G, da se igrač teleportuje napred po Lokalnom i Globalnom koordinatnom sistemu, što vodi do različitog ponašanja ukoliko igrač nije poravnat sa globalnim sistemom.
 
@@ -17,7 +18,7 @@ Demo scena ima tri kocke koje igrač može da pomera sa WASD, ali svaka koristi 
 Sva tri načina kretanja su legitimna i mogu se koristiti, samo je pitanje kada želimo da koristimo koji.
 
 Scena takođe ima dve prepreke, kocke koje na sebi imaju Collider komponente. Prva ima podešen **isTrigger**, što znači da se ne koristi za sudaranje sa telima, već samo kao aktivator za određene akcije (npr detekciju kada igrač prolazi kroz neki deo scene). Druga prepreka nema podešen ovaj parametar, pa stoga kocke koje igrač kontroliše preko fizike ne mogu da prođu kroz nju.
-Obe prepreke imaju `OnTriggerEnter(Collider other)` i `OnCollisionEnter(dollision sollision)` implementirane, pa prilikom prolaska ili dodira igrača vidimo pozive ovih funkcija i ispise u konzoli.
+Obe prepreke imaju `OnTriggerEnter()` i `OnCollisionEnter()` implementirane, pa prilikom prolaska ili dodira igrača vidimo pozive ovih funkcija i ispise u konzoli.
 
 #### Nedelja4: Prefabi - Šta su i kako ih ubacujemo u scenu?
  ![nedelja4_Image](docs/images/prefabs.png)
