@@ -28,6 +28,7 @@ Prefab projektila na sebi ima skriptu **UnistiNaDodir** koja na poziv `OnTrigger
 
 #### Nedelja5: Animacija - Kako animiramo modele?
 Ovaj folder ima dve scene:
+
  ![nedelja5_Image1](docs/images/motion_basics.png)
 
 SviPokreti scena pokazuje sve animacije koje smo skinuli u paketu humanoidnih animacija sa Asset Store-a.
@@ -42,13 +43,18 @@ Animatori igrača koriste humanoidne animacije, i razlikuju se po kompleksnosti 
 
 Meni scena ima osnovne elemente interfejsa, slike i dugme za pokretanje scene Nivo1:
  ![nedelja6_Image2](docs/images/level1.png)
- 
+
 U ovoj sceni, igrač može da koristi kursor kako bi pritiskom na sfere pomerao crvenu kocku.
 Koristimo metode `Camera.main.ScreenPointToRay()` i `Physics.Raycast()` da bismo definisali **gde** se pomeramo, zatim `Vector3.Lerp()` metodu da definišemo **kako** da se pomerimo. Sfere na sebi imaju implementirane `OnTriggerEnter()` metode u kojima puštaju zvuk. Ovu metodu implementira i skripta **PomeranjeKockeMisem** da bi povećala broj poena, i prilikom sakupljanja dovoljno poena učitava nazad Meni scenu.
 
 
 Svi modeli korišćeni u projekti se besplatno mogu nabaciti na Unity Asset Store:
+
 [Cartoon Tank Free](https://assetstore.unity.com/packages/3d/vehicles/land/cartoon-tank-free-165189)
+
 [Basic Motisons Free Pack](https://assetstore.unity.com/packages/3d/animations/basic-motions-free-pack-154271)
+
 [Character Pack: Free Sample](https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870)
+
 [Simple Button Set 02](https://assetstore.unity.com/packages/2d/gui/icons/simple-button-set-02-184903)
+
